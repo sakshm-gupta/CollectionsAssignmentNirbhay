@@ -29,9 +29,10 @@ namespace CollectionsAssignment
                 }
 
                 Console.WriteLine("Book List :");
-                foreach (BookStore i in ht)
+                foreach (DictionaryEntry i in ht)
                 {
-                    Console.WriteLine(i.bookId + " " + i.bookName);
+                    BookStore obj = (BookStore)i.Value;
+                    Console.WriteLine(i.Key + " " + obj.bookName);
                 }
             }catch(Exception e)
             {
